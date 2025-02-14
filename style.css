@@ -401,55 +401,145 @@ header label i{
   color: #007bff;
 }
 
+/*--------Skill Section CSS Start--------*/
 
-.skills-section {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-}
-
-.skills-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
   color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+.skill-section {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  flex: 1;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  text-align: center;
+}
+
+/* Progress Bar Styles */
 .skill-item {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .skill-name {
   display: block;
-  font-size: 1.1rem;
-  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   color: #555;
-  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .progress-bar {
   width: 100%;
   height: 10px;
-  background-color: #e0e0e0;
+  background: #e0e0e0;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
 
 .progress {
   height: 100%;
-  background-color: #007bff;
   border-radius: 5px;
-  transition: width 0.5s ease-in-out;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  width: 0;
+  transition: width 1.5s ease-in-out;
 }
 
-.skill-percent {
-  display: block;
-  text-align: right;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 5px;
+/* General Info Styles */
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #6a11cb;
+}
+
+.info-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.info-text strong {
+  color: #333;
+}
+
+/* Animations */
+@keyframes fillProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--progress);
+  }
+}
+
+.html {
+  --progress: 95%;
+  animation: fillProgress 1.5s forwards;
+}
+
+.css {
+  --progress: 75%;
+  animation: fillProgress 1.5s forwards;
+}
+
+.javascript {
+  --progress: 65%;
+  animation: fillProgress 1.5s forwards;
+}
+
+.php {
+  --progress: 70%;
+  animation: fillProgress 1.5s forwards;
+}
+
+.mysql {
+  --progress: 80%;
+  animation: fillProgress 1.5s forwards;
+}
+/*-----------Skill Section CSS End--------*/
 
 /* General Styling */
 .contact-section {
